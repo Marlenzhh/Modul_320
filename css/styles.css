@@ -196,12 +196,16 @@ a.card:hover { transform: translateY(-4px); box-shadow: 0 9px 0 var(--surface-sh
   }
   .tabbar a:active, .tabbar a:hover { background: var(--accent-soft); color: var(--accent-color); }
   .raster-head { display: none; }
-  .raster-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .raster-row { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.6rem; margin-bottom: 1.2rem; }
   .raster-label { grid-column: 1 / -1; flex-direction: row; align-items: baseline; gap: 0.7rem; }
-  .card p { display: block; }
+  /* Handy: Raster kompakt, nur Kuerzel wie M1, M2 ... */
+  .raster-row .card { padding: 0.9rem 0.3rem; text-align: center; min-height: 64px; display: grid; place-items: center; border-radius: 14px; }
+  .raster-row .card .badge { position: static; transform: none; font-size: 1.15rem; letter-spacing: 0.04em; padding: 0.3rem 0.7rem; }
+  .raster-row .card h3, .raster-row .card p, .raster-row .card .stars, .raster-row .card .quiz-score, .raster-row .card .muted, .raster-row .card .done-mark { display: none; }
+  .raster-row a.card:hover { transform: none; }
+  .raster-row .card.done { outline-offset: 0; }
 }
 @media (max-width: 680px) {
-  .raster-row { grid-template-columns: minmax(0, 1fr); }
   .main { padding-top: 1.5rem; }
 }
 @media (prefers-reduced-motion: reduce) {
