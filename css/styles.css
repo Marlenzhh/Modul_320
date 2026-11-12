@@ -282,3 +282,12 @@ a.card:hover { transform: translateY(-4px); box-shadow: 0 9px 0 var(--surface-sh
   .part { padding: 1.2rem 0.7rem 0.8rem; margin-top: 2rem; }
   .part-head h2 { font-size: 1.4rem; }
 }
+
+/* Papier-Markierung im Raster */
+.paper-tag { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.4rem; background: #ffc9c9; color: #183153; font-size: 0.72rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 8px; }
+.paper-tag .ico { width: 14px; height: 14px; }
+.paper-legend { margin-top: 0; vertical-align: middle; }
+@media (max-width: 900px) {
+  .raster-row .card .paper-tag { display: flex; position: absolute; top: -8px; right: -6px; margin: 0; padding: 0.2rem; border-radius: 999px; }
+  .raster-row .card .paper-tag span { display: none; }
+}

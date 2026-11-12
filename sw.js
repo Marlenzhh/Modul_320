@@ -1,5 +1,5 @@
 /* Service Worker: Offline-Modus fuer Modul 320 */
-const CACHE = 'm320-v5';
+const CACHE = 'm320-v6';
 const LOCAL = ["./", "index.html", "css/styles.css", "js/app.js", "js/quiz.js", "manifest.webmanifest", "icons/icon.svg", "icons/icon-192.png", "icons/icon-512.png", "Anforderungen/x_gitres/auction.png", "Anforderungen/x_gitres/figur_hierarchie.png", "aufgaben/m1.html", "aufgaben/d1.html", "aufgaben/v1.html", "aufgaben/m2.html", "aufgaben/d2.html", "aufgaben/v2.html", "aufgaben/m3.html", "aufgaben/d3.html", "aufgaben/v3.html", "aufgaben/q3.html", "aufgaben/m4.html", "quiz/m1.html", "quiz/d1.html", "quiz/v1.html", "quiz/m2.html", "quiz/d2.html", "quiz/v2.html", "quiz/m3.html", "quiz/d3.html", "quiz/v3.html", "quiz/q3.html", "quiz/m4.html"];
 const REMOTE = ['https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js'];
 
