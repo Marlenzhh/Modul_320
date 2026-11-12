@@ -95,3 +95,11 @@ Hinweis zum Raster: Fuer Q1, Q2, Q4, D4 und V4 gibt es keinen Ordner `KN-*`. Das
 - Teamarbeit: Die Themen ab Niveau 2 sind laut Modul-README im Team umzusetzen.
 - Antworten und Texte auf Deutsch, knapp und praxisnah. Code und Bezeichner auf Englisch.
 - Pushen nur auf Anfrage.
+
+## Webseite (GitHub Pages)
+
+- `index.html` im Root ist die Startseite mit dem Kompetenzraster. Pro Aufgabe gibt es eine Seite in `aufgaben/` (`m1.html`, `d1.html`, ...), Stil in `css/styles.css`, Skript in `js/app.js`.
+- Visuell zu erledigen sind die UML-Aufgaben M1 bis M4 (Klassen- und Sequenzdiagramme). Die Diagramme sind Mermaid-Code in den HTML-Seiten und dienen als Lösungsvorschlag zum Vergleichen.
+- Die Reihenfolge der Seiten folgt dem Raster von links nach rechts: M1, D1, V1, M2, D2, V2, M3, D3, V3, Q3, M4.
+- Lokal testen: `python -m http.server 4320` im Repo-Ordner, dann http://localhost:4320 öffnen.
+- Pages einschalten: Repo-Einstellungen, Pages, Branch `main`, Ordner `/ (root)`. `.nojekyll` verhindert die Jekyll-Verarbeitung.

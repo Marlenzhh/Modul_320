@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>D1 Klassen, Objekte und Kapselung | Modul 320</title>
+<script>try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');}catch(e){document.documentElement.setAttribute('data-theme','dark');}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="task">
+<div class="layout">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-tile">M320</div><div class="brand-text"><strong>Objektorientiert<br>Programmieren</strong><span class="muted">Modul 320</span></div></div>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Hell/Dunkel umschalten"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+  <nav class="nav" aria-label="Aufgaben"><a class="nav-link" href="../index.html"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Übersicht</span></a>
+<a class="nav-link" href="../aufgaben/m1.html" data-task="M1"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>M1</b> Klassendiagramm mit HAT-Beziehungen</span></a>
+<a class="nav-link active" href="../aufgaben/d1.html" data-task="D1"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>D1</b> Klassen, Objekte und Kapselung</span></a>
+<a class="nav-link" href="../aufgaben/v1.html" data-task="V1"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>V1</b> Einfache Vererbung und Interfaces</span></a>
+<a class="nav-link" href="../aufgaben/m2.html" data-task="M2"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>M2</b> Sequenzdiagramm zu einem Use Case</span></a>
+<a class="nav-link" href="../aufgaben/d2.html" data-task="D2"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>D2</b> HAT-Beziehungen und Delegation</span></a>
+<a class="nav-link" href="../aufgaben/v2.html" data-task="V2"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>V2</b> Hierarchie, Polymorphismus, Überschreiben</span></a>
+<a class="nav-link" href="../aufgaben/m3.html" data-task="M3"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>M3</b> Interfaces im Klassendiagramm</span></a>
+<a class="nav-link" href="../aufgaben/d3.html" data-task="D3"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>D3</b> Delegation und eigene Exceptions</span></a>
+<a class="nav-link" href="../aufgaben/v3.html" data-task="V3"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>V3</b> Interfaces für flexiblen Code</span></a>
+<a class="nav-link" href="../aufgaben/q3.html" data-task="Q3"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>Q3</b> Datenstrukturen und Algorithmen</span></a>
+<a class="nav-link" href="../aufgaben/m4.html" data-task="M4"><svg class="ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span><b>M4</b> Eigenes Projekt: UML und Dokumentation</span></a></nav>
+</aside>
+<main class="main">
+  <p class="crumb"><a href="../index.html">Übersicht</a> / Implementieren: Delegation · Niveau 1</p>
+  <h1>D1: Klassen, Objekte und Kapselung</h1>
+  <div class="meta"><span class="badge badge-blue">Niveau 1</span><span class="stars" title="Gewichtung laut Raster">**</span></div>
+  <p class="muted lead">Klassen, Konstruktoren, Methoden, Kapselung</p>
+
+  <section class="block">
+    <h2>Lernziele</h2>
+    <ul class="check"><li><label><input type="checkbox" data-key="D1-lz-0"><span>Eigene Klassen entwerfen und Objekte instanziieren</span></label></li><li><label><input type="checkbox" data-key="D1-lz-1"><span>Objekte kommunizieren über Methodenaufrufe</span></label></li><li><label><input type="checkbox" data-key="D1-lz-2"><span>Werte an andere Objekte übergeben</span></label></li><li><label><input type="checkbox" data-key="D1-lz-3"><span>Attribute so anpassen, dass sie von aussen nicht veränderbar sind</span></label></li><li><label><input type="checkbox" data-key="D1-lz-4"><span>Aufzeigen, wie sich der Zustand eines Objekts durch Attribute verändert</span></label></li></ul>
+  </section>
+
+  <section class="block">
+    <h2>Auftrag</h2>
+    <p>Ein Programm schreiben, das die Lernziele aufzeigt (Arbeit mit KI möglich). Als Resultat <strong>zwei Implementationen</strong> der Lehrperson zeigen.</p>
+  </section>
+
+  <section class="block"><h2>Ideen für die Umsetzung</h2>
+<ul>
+<li><strong>Garagen-Simulation:</strong> Fahrzeuge zur Reparatur registrieren, Kosten auflisten, abfragen was repariert ist</li>
+<li><strong>Bank-Simulation:</strong> Konti wählen, einzahlen, abheben, Transfer zwischen zwei Konti</li>
+<li><strong>Heizungssystem:</strong> pro Raum eine Heizung, zentral regulierbar</li>
+<li>Eigene Idee, mit der Lehrperson besprechen</li>
+</ul></section><section class="block"><h2>Beispiel: Bank mit Kapselung</h2><div class="diagram"><pre class="mermaid">classDiagram
+direction LR
+class Konto {
+  -String kontonummer
+  -double saldo
+  +einzahlen(betrag)
+  +abheben(betrag)
+  +getSaldo() double
+}
+class Bank {
+  -List~Konto~ konten
+  +transfer(von, nach, betrag)
+  +findeKonto(nummer) Konto
+}
+Bank &quot;1&quot; o-- &quot;0..*&quot; Konto</pre></div><p class="muted caption">Das Attribut saldo ist private. Verändert wird es nur über einzahlen() und abheben(). Das ist Datenkapselung.</p></section>
+  <section class="block"><h2>Fragen zur Besprechung</h2><ul><li>Datenkapselung zeigen: Wie wird der Zugriff auf Attribute gelöst?</li><li>Wie kommunizieren Objekte miteinander? Werden Werte mitgegeben?</li><li>Wie verändert sich der Zustand eines Objekts?</li><li>Unterschied zwischen primitivem und komplexem Datentyp, Beispiele im Code</li></ul></section>
+
+  <div class="actions">
+    <button class="btn" id="doneBtn" type="button" data-task="D1">Als erledigt markieren</button>
+    <a class="more" href="https://github.com/Marlenzhh/Modul_320/blob/main/Anforderungen/Kompetenzen/KN-D1/README.md" target="_blank" rel="noopener noreferrer">Original-Auftrag lesen <span class="arrow">→</span></a>
+  </div>
+  <div class="pager"><a class="btn-sec" href="m1.html">← M1</a><a class="btn-sec" href="v1.html">V1 →</a></div>
+  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a></footer>
+</main>
+</div>
+<nav class="tabbar" aria-label="Navigation"><a href="../index.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Übersicht</span></a><a href="m1.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg><span>M1</span></a><a href="v1.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg><span>V1</span></a></nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>
