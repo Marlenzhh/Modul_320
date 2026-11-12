@@ -1,6 +1,6 @@
 # Modul 320 - Objektorientiert Programmieren
 
-Arbeitsrepo fuer das TBZ-Modul m320 (Teamarbeit mit Marlen). Die Unterlagen stammen aus dem Schul-Repo https://gitlab.com/ch-tbz-it/Stud/m320 (ohne Verlauf uebernommen).
+Arbeitsrepo fuer das TBZ-Modul m320 (Teamarbeit mit Marlen). Die Unterlagen stammen aus dem Schul-Repo https://gitlab.com/ch-tbz-it/Stud/m320 (ohne Verlauf uebernommen, abgelegt in `Anforderungen/`).
 
 ## Modulbeschreibung
 
@@ -14,6 +14,8 @@ Applikationen und Schnittstellen objektorientiert modellieren, implementieren, t
 Modulverantwortlich: Julian Kaeser (julian.kaeser@tbz.ch). Sprache im Modul: Java.
 
 ## Repo-Struktur
+
+Alle Unterlagen liegen im Ordner `Anforderungen/`. Die Ordnernamen unten sind relativ dazu.
 
 | Ordner | Inhalt |
 |---|---|
