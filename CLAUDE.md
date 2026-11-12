@@ -83,8 +83,15 @@ Alle Unterlagen liegen im Ordner `Anforderungen/`. Die Ordnernamen unten sind re
 
 Die Zuordnung ist aus den Ordnernamen abgeleitet. Die genauen Auftraege stehen in `Kompetenzen/KN-*`.
 
+### Auftraege auf Papier
+
+Laut Kompetenzraster sind nur die Auftraege von **V1** auf Papier. Im Repo gibt es dazu keinen Text, `Kompetenzen/KN-V1/README.md` enthaelt nur die digitale Aufgabe (zwei Implementationen mit KI zeigen). Die Papier-Auftraege gibt die Lehrperson im Unterricht aus. Alle anderen Felder haben keinen Papier-Hinweis.
+
+Hinweis zum Raster: Fuer Q1, Q2, Q4, D4 und V4 gibt es keinen Ordner `KN-*`. Das sind eigene Arbeiten oder Projekte (Pfeil-Symbol im Raster).
+
 ## Arbeitsweise
 
+- Im Kompetenzraster wird von links nach rechts gearbeitet, also Niveau 1, dann 2, 3 und 4.
 - Teamarbeit: Die Themen ab Niveau 2 sind laut Modul-README im Team umzusetzen.
 - Antworten und Texte auf Deutsch, knapp und praxisnah. Code und Bezeichner auf Englisch.
 - Pushen nur auf Anfrage.
