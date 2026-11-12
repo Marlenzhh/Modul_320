@@ -106,7 +106,9 @@ Hinweis zum Raster: Fuer Q1, Q2, Q4, D4 und V4 gibt es keinen Ordner `KN-*`. Das
 
 ## Quiz und PWA
 
-- Jede Aufgabenseite hat ein Quiz (Richtig/Falsch und Multiple Choice, nur antippen). Falsche Antworten werden am Ende wiederholt, das beste Ergebnis wird im Browser gespeichert. Fragen stehen als JSON in der jeweiligen Seite, Logik in `js/quiz.js`.
+- Die Seite ist klar in zwei Teile getrennt: **Lernteil** (`aufgaben/*.html`, Infos, Lernziele, Auftrag, Diagramme) und **Quiz** (`quiz/*.html`, je eine Seite pro Kompetenz). Die Startseite zeigt oben das Raster zum Lernteil und unten das Raster mit den Quizzen.
+- Quiz: Richtig/Falsch und Multiple Choice, nur antippen. Falsche Antworten werden am Ende wiederholt, das beste Ergebnis wird im Browser gespeichert. Fragen stehen als JSON in der Quiz-Seite, Logik in `js/quiz.js`.
+- Auf dem Handy ist das Raster kompakt (nur Kürzel wie M1, M2) und die Diagramme lassen sich seitlich wischen.
 - Die Seite ist eine PWA: `manifest.webmanifest`, `sw.js` (Service Worker) und `icons/`. Beim ersten Besuch werden alle Seiten und Mermaid zwischengespeichert, danach läuft alles offline.
 - Nach inhaltlichen Änderungen in `sw.js` die Konstante `CACHE` hochzählen (z.B. `m320-v3`), damit Browser den Cache erneuern.
 - Offline testen: Seite einmal online öffnen, dann in den DevTools unter Netzwerk auf Offline stellen und neu laden.

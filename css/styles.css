@@ -207,6 +207,27 @@ a.card:hover { transform: translateY(-4px); box-shadow: 0 9px 0 var(--surface-sh
 }
 @media (max-width: 680px) {
   .main { padding-top: 1.5rem; }
+  .meta { gap: 0.4rem; }
+  .actions { flex-direction: column; align-items: stretch; gap: 1rem; }
+  .actions .btn { width: 100%; }
+  .pager { gap: 0.5rem; }
+  .btn-sec { padding: 0.4rem 0.9rem; font-size: 0.95rem; }
+  .block { margin-top: 1.6rem; padding-top: 1.3rem; }
+  .code { font-size: 0.8rem; }
+  .tbl { font-size: 0.88rem; }
+  .tbl th, .tbl td { padding: 0.45rem 0.55rem; overflow-wrap: normal; word-break: normal; min-width: 7rem; }
+  /* Diagramme lesbar halten: breiter als der Bildschirm, seitlich wischen */
+  .diagram { text-align: left; padding: 0.8rem 0.6rem; }
+  .diagram::before { content: "90  seitlich wischen  92"; display: block; text-align: center; color: var(--text-muted); font-size: 0.75rem; font-weight: 800; margin-bottom: 0.4rem; }
+  .diagram pre.mermaid svg { min-width: 560px; max-width: none !important; }
+  .quiz { padding: 1rem; }
+  .quiz-q { font-size: 1.15rem; }
+  .quiz-opt { padding: 0.75rem 0.85rem; }
+  .quiz-feedback .btn { width: 100%; }
+}
+@media (max-width: 380px) {
+  h1 { font-size: 1.6rem; }
+  .brand-text { font-size: 0.85rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
@@ -237,3 +258,27 @@ a.card:hover { transform: translateY(-4px); box-shadow: 0 9px 0 var(--surface-sh
 .quiz-feedback.bad { background: rgba(255, 201, 201, 0.18); }
 .quiz-feedback p { margin: 0.3rem 0 0.9rem; }
 .quiz-score { display: block; font-size: 0.8rem; font-weight: 800; color: var(--accent-color); }
+
+/* Trennung Lernteil und Quiz */
+.nav-title { margin: 1rem 0 0.2rem 0.8rem; font-size: 0.72rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0 0.4rem; }
+.chip { text-decoration: none; font-weight: 800; font-size: 0.85rem; color: var(--text-color); border: 2px solid var(--border-color); border-radius: 999px; padding: 0.15rem 0.7rem; transition: background 0.15s ease, border-color 0.15s ease; }
+.chip:hover { background: var(--accent-soft); border-color: var(--accent-color); }
+.chip.active { background: var(--accent-color); border-color: var(--accent-color); color: var(--navy); }
+.tag-learn, .tag-quiz { display: inline-block; font-size: 0.72rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.6rem; border-radius: 8px; color: var(--navy); margin-right: 0.4rem; }
+.tag-learn { background: #74c0fc; }
+.tag-quiz { background: #ffd43b; }
+.part { margin-top: 2.5rem; padding: 1.6rem clamp(0.8rem, 2vw, 1.8rem) 1.2rem; border-radius: 20px; border: 2px dashed var(--border-color); }
+.part-quiz { border-color: var(--yellow); }
+.part-learn { border-color: var(--accent-color); }
+.part-head { display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
+.part-head h2 { margin: 0; }
+.btn-link { display: inline-block; text-decoration: none; }
+.btn-sec.done-btn { font: inherit; font-weight: 800; background: transparent; color: var(--text-color); cursor: pointer; }
+.btn-sec.done-btn.is-done { background: #a9e34b; border-color: #a9e34b; color: var(--navy); }
+.quiz-cta { text-align: left; }
+.card.perfect { outline: 2px solid var(--yellow); }
+@media (max-width: 900px) {
+  .part { padding: 1.2rem 0.7rem 0.8rem; margin-top: 2rem; }
+  .part-head h2 { font-size: 1.4rem; }
+}

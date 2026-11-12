@@ -31,7 +31,9 @@
   Array.prototype.forEach.call(document.querySelectorAll('[data-quiz-score]'), function (s) {
     var b = best(s.dataset.quizScore);
     var total = s.dataset.total;
-    if (b !== null) s.textContent = 'Quiz: ' + b + ' von ' + total + ' richtig';
+    if (b !== null) s.textContent = 'Bestes Ergebnis: ' + b + ' von ' + total;
+    var card = s.closest('.card');
+    if (card && b !== null && String(b) === String(total)) card.classList.add('perfect');
   });
 
   var box = document.getElementById('quiz');

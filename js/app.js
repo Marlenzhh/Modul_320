@@ -66,7 +66,7 @@
     var paint = function () {
       var d = isDone(id);
       doneBtn.classList.toggle('is-done', d);
-      doneBtn.textContent = d ? 'Erledigt' : 'Als erledigt markieren';
+      doneBtn.textContent = d ? 'Erledigt ✓' : 'Als erledigt markieren';
     };
     doneBtn.addEventListener('click', function () {
       store('m320-done-' + id, isDone(id) ? null : '1');
