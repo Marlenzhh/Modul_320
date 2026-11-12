@@ -8,6 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0d1a2d">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="task">
@@ -65,6 +69,7 @@ class Bank {
   +findeKonto(nummer) Konto
 }
 Bank &quot;1&quot; o-- &quot;0..*&quot; Konto</pre></div><p class="muted caption">Das Attribut saldo ist private. Verändert wird es nur über einzahlen() und abheben(). Das ist Datenkapselung.</p></section>
+  <section class="block" id="quiz-section"><h2>Quiz</h2><div class="quiz" id="quiz" data-task="D1"></div><script type="application/json" id="quiz-data">[{"t": "mc", "q": "Welche Sichtbarkeit haben Attribute bei sauberer Datenkapselung?", "o": ["public", "private", "static", "final"], "a": 1, "e": "Attribute sind private. Zugriff gibt es nur über Methoden wie Getter und Setter."}, {"t": "tf", "q": "Ein Konstruktor hat einen Rückgabetyp.", "a": false, "e": "Falsch. Ein Konstruktor hat keinen Rückgabetyp, nicht einmal void, und heisst wie die Klasse."}, {"t": "mc", "q": "Wie wird in Java ein Objekt der Klasse Konto erzeugt?", "o": ["Konto k = Konto();", "Konto k = new Konto();", "new Konto k;", "Konto k = create Konto();"], "a": 1, "e": "Mit dem Schlüsselwort new und dem Konstruktoraufruf."}, {"t": "tf", "q": "Getter und Setter erlauben einen kontrollierten Zugriff auf private Attribute.", "a": true, "e": "Richtig. In einem Setter kann man z.B. Werte prüfen, bevor sie gespeichert werden."}, {"t": "mc", "q": "Welcher dieser Datentypen ist primitiv?", "o": ["String", "Konto", "int", "ArrayList"], "a": 2, "e": "int ist primitiv. String, eigene Klassen und ArrayList sind Referenztypen."}, {"t": "mc", "q": "Wodurch ändert sich der Zustand eines Objekts?", "o": ["Durch den Klassennamen", "Durch Änderung seiner Attributwerte", "Durch den Konstruktor-Namen", "Durch Kommentare"], "a": 1, "e": "Der Zustand eines Objekts besteht aus den Werten seiner Attribute, z.B. dem Saldo."}]</script></section>
   <section class="block"><h2>Fragen zur Besprechung</h2><ul><li>Datenkapselung zeigen: Wie wird der Zugriff auf Attribute gelöst?</li><li>Wie kommunizieren Objekte miteinander? Werden Werte mitgegeben?</li><li>Wie verändert sich der Zustand eines Objekts?</li><li>Unterschied zwischen primitivem und komplexem Datentyp, Beispiele im Code</li></ul></section>
 
   <div class="actions">
@@ -72,11 +77,12 @@ Bank &quot;1&quot; o-- &quot;0..*&quot; Konto</pre></div><p class="muted caption
     <a class="more" href="https://github.com/Marlenzhh/Modul_320/blob/main/Anforderungen/Kompetenzen/KN-D1/README.md" target="_blank" rel="noopener noreferrer">Original-Auftrag lesen <span class="arrow">→</span></a>
   </div>
   <div class="pager"><a class="btn-sec" href="m1.html">← M1</a><a class="btn-sec" href="v1.html">V1 →</a></div>
-  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a></footer>
+  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a><br><span id="swStatus" class="muted"></span></footer>
 </main>
 </div>
 <nav class="tabbar" aria-label="Navigation"><a href="../index.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Übersicht</span></a><a href="m1.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg><span>M1</span></a><a href="v1.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg><span>V1</span></a></nav>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="../js/app.js"></script>
+<script src="../js/quiz.js"></script>
 </body>
 </html>

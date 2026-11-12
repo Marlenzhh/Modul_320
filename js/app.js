@@ -93,4 +93,23 @@
     }
   }
   markDone();
+
+  // PWA: Service Worker fuer den Offline-Modus
+  var status = document.getElementById('swStatus');
+  var appScript = document.querySelector('script[src$="js/app.js"]');
+  if ('serviceWorker' in navigator && appScript && /^https?:$/.test(location.protocol)) {
+    var swUrl = appScript.src.replace(/js\/app\.js.*$/, 'sw.js');
+    navigator.serviceWorker.register(swUrl).then(function () {
+      return navigator.serviceWorker.ready;
+    }).then(function () {
+      if (status) status.textContent = 'Offline verfügbar';
+    }).catch(function () {
+      if (status) status.textContent = '';
+    });
+  }
+  function net() {
+    if (status && !navigator.onLine) status.textContent = 'Offline-Modus aktiv';
+  }
+  window.addEventListener('offline', net);
+  window.addEventListener('online', function () { if (status) status.textContent = 'Offline verfügbar'; });
 })();

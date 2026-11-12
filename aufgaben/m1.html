@@ -8,6 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0d1a2d">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="task">
@@ -126,6 +130,7 @@ Bestellung &quot;1&quot; *-- &quot;0..1&quot; Zahlung : bezahlt durch</pre></div
 <tr><td>Bestellposition - Produkt</td><td>Assoziation</td><td>Produkte existieren unabhängig und dürfen nicht gelöscht werden.</td></tr>
 <tr><td>Kunde - Bestellung</td><td>Assoziation</td><td>Ein Kunde hat beliebig viele Bestellungen, eine Bestellung genau einen Kunden.</td></tr>
 </tbody></table></section>
+  <section class="block" id="quiz-section"><h2>Quiz</h2><div class="quiz" id="quiz" data-task="M1"></div><script type="application/json" id="quiz-data">[{"t": "mc", "q": "Welches Symbol steht in UML für ein privates Attribut?", "o": ["+", "-", "#", "~"], "a": 1, "e": "Minus (-) bedeutet private. Plus (+) ist public, die Raute (#) ist protected."}, {"t": "mc", "q": "Welche Beziehung ist die stärkste: Der Teil existiert nicht ohne das Ganze?", "o": ["Assoziation", "Aggregation", "Komposition", "Abhängigkeit"], "a": 2, "e": "Bei der Komposition wird der Teil mit dem Ganzen gelöscht, z.B. Zimmer und Hotel."}, {"t": "tf", "q": "Bei einer Aggregation kann der Teil auch ohne das Ganze existieren.", "a": true, "e": "Richtig. Ein Ausstattungsgegenstand kann z.B. einem anderen Zimmer zugeordnet werden."}, {"t": "mc", "q": "Was bedeutet die Multiplizität 0..*?", "o": ["Genau eins", "Keine oder beliebig viele", "Mindestens eins", "Höchstens null"], "a": 1, "e": "0..* heisst: keines oder beliebig viele. Mindestens eins wäre 1..*."}, {"t": "mc", "q": "Welches Symbol steht für protected?", "o": ["+", "-", "#", "*"], "a": 2, "e": "Die Raute (#) steht für protected."}, {"t": "tf", "q": "Die Klasse mit der main-Methode gehört normalerweise ins Klassendiagramm des Fachmodells.", "a": false, "e": "Falsch. Sie startet nur die Applikation und gehört nicht zum fachlichen Modell."}, {"t": "mc", "q": "Ein Mitarbeiter bleibt gespeichert, auch wenn das Hotel gelöscht wird. Welche Beziehung passt?", "o": ["Komposition", "Aggregation", "Vererbung", "Realisierung"], "a": 1, "e": "Der Mitarbeiter existiert unabhängig vom Hotel, also Aggregation statt Komposition."}]</script></section>
   <section class="block"><h2>Fragen zur Besprechung</h2><ul><li>Müssen Getter und Setter im Diagramm abgebildet werden?</li><li>Gehört die Klasse mit der main-Methode zum Diagramm?</li><li>Wann macht eine bidirektionale Beziehung Sinn?</li><li>Reicht es, wenn eine Assoziation ohne Pfeil dargestellt wird?</li></ul></section>
 
   <div class="actions">
@@ -133,11 +138,12 @@ Bestellung &quot;1&quot; *-- &quot;0..1&quot; Zahlung : bezahlt durch</pre></div
     <a class="more" href="https://github.com/Marlenzhh/Modul_320/blob/main/Anforderungen/Kompetenzen/KN-M1/README.md" target="_blank" rel="noopener noreferrer">Original-Auftrag lesen <span class="arrow">→</span></a>
   </div>
   <div class="pager"><span></span><a class="btn-sec" href="d1.html">D1 →</a></div>
-  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a></footer>
+  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a><br><span id="swStatus" class="muted"></span></footer>
 </main>
 </div>
 <nav class="tabbar" aria-label="Navigation"><a href="../index.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Übersicht</span></a><a href="d1.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg><span>D1</span></a></nav>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="../js/app.js"></script>
+<script src="../js/quiz.js"></script>
 </body>
 </html>

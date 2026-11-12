@@ -8,6 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0d1a2d">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="task">
@@ -57,6 +61,7 @@ Zuerich ---|55| Luzern((Luzern))
 Bern ---|95| Luzern
 Bern ---|160| Genf((Genf))
 Luzern ---|180| Genf</pre></div><p class="muted caption">Orte sind Knoten, Strassen sind Kanten mit Distanz. Die Zahlen sind Beispielwerte.</p></section>
+  <section class="block" id="quiz-section"><h2>Quiz</h2><div class="quiz" id="quiz" data-task="Q3"></div><script type="application/json" id="quiz-data">[{"t": "mc", "q": "Welches Prinzip hat ein Stack?", "o": ["FIFO", "LIFO", "Zufall", "Sortiert"], "a": 1, "e": "Last In, First Out: das zuletzt Eingefügte kommt zuerst raus."}, {"t": "mc", "q": "Welche Datenstruktur passt zu Undo/Redo?", "o": ["Stack", "Set", "Array fester Grösse", "Enum"], "a": 0, "e": "Ein Stack für Undo und ein Stack für Redo."}, {"t": "mc", "q": "Welche Struktur passt zu einem Navigationssystem mit Orten und Strassen?", "o": ["Graph", "Stack", "Set", "String"], "a": 0, "e": "Orte sind Knoten, Strassen sind Kanten. Für den kürzesten Weg nutzt man z.B. Dijkstra."}, {"t": "tf", "q": "Eine HashMap findet einen Eintrag über den Schlüssel im Mittel sehr schnell.", "a": true, "e": "Richtig, der Zugriff ist im Mittel nahezu konstant."}, {"t": "mc", "q": "Welche Datenstruktur nutzt die Breitensuche (BFS) typischerweise?", "o": ["Queue", "Stack", "Set", "Map"], "a": 0, "e": "BFS arbeitet mit einer Queue (FIFO)."}, {"t": "mc", "q": "Was ist bei einer LinkedList günstiger als bei einer ArrayList?", "o": ["Einfügen am Anfang", "Zugriff per Index", "Speicherverbrauch", "Sortieren"], "a": 0, "e": "In einer LinkedList müssen beim Einfügen am Anfang keine Elemente verschoben werden."}]</script></section>
   
 
   <div class="actions">
@@ -64,11 +69,12 @@ Luzern ---|180| Genf</pre></div><p class="muted caption">Orte sind Knoten, Stras
     <a class="more" href="https://github.com/Marlenzhh/Modul_320/blob/main/Anforderungen/Kompetenzen/KN-Q3/README.md" target="_blank" rel="noopener noreferrer">Original-Auftrag lesen <span class="arrow">→</span></a>
   </div>
   <div class="pager"><a class="btn-sec" href="v3.html">← V3</a><a class="btn-sec" href="m4.html">M4 →</a></div>
-  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a></footer>
+  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a><br><span id="swStatus" class="muted"></span></footer>
 </main>
 </div>
 <nav class="tabbar" aria-label="Navigation"><a href="../index.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Übersicht</span></a><a href="v3.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg><span>V3</span></a><a href="m4.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg><span>M4</span></a></nav>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="../js/app.js"></script>
+<script src="../js/quiz.js"></script>
 </body>
 </html>

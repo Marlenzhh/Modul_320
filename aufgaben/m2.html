@@ -8,6 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0d1a2d">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="task">
@@ -71,6 +75,7 @@ loop solange nicht &quot;exit&quot; eingegeben wurde
   end
 end
 SS-&gt;&gt;SS: printGoodbye()</pre></div></section>
+  <section class="block" id="quiz-section"><h2>Quiz</h2><div class="quiz" id="quiz" data-task="M2"></div><script type="application/json" id="quiz-data">[{"t": "mc", "q": "Wie wird ein Methodenaufruf im Sequenzdiagramm dargestellt?", "o": ["Gestrichelter Pfeil", "Durchgezogener Pfeil", "Raute", "Gepunktete Linie ohne Pfeil"], "a": 1, "e": "Aufrufe sind durchgezogene Pfeile."}, {"t": "mc", "q": "Wie wird die Antwort (Return-Value) dargestellt?", "o": ["Durchgezogener Pfeil", "Gestrichelter Pfeil", "Doppelpfeil", "Gar nicht"], "a": 1, "e": "Rückgaben sind gestrichelte Pfeile."}, {"t": "tf", "q": "Ein Sequenzdiagramm ist eine dynamische Darstellung, ein Klassendiagramm eine statische.", "a": true, "e": "Richtig. Das Sequenzdiagramm zeigt den zeitlichen Ablauf."}, {"t": "mc", "q": "Wofür wird das Fragment alt verwendet?", "o": ["Für Wiederholungen", "Für alternative Abläufe (if/else)", "Für Kommentare", "Für Objekte"], "a": 1, "e": "alt zeigt Alternativen, loop zeigt Wiederholungen."}, {"t": "mc", "q": "Was zeigt die Lebenslinie (Lifeline)?", "o": ["Die Lebensdauer eines Objekts im Ablauf", "Die Anzahl der Attribute", "Die Vererbung", "Die Sichtbarkeit"], "a": 0, "e": "Die senkrechte gestrichelte Linie unter einem Objekt zeigt, wie lange es lebt."}, {"t": "tf", "q": "Ein Aufruf innerhalb desselben Objekts wird als Pfeil auf sich selbst gezeichnet.", "a": true, "e": "Richtig, z.B. printWelcome() im SupportSystem."}, {"t": "mc", "q": "Welches Tool eignet sich gut für Sequenzdiagramme als Text?", "o": ["PlantUML", "Excel", "Paint", "Notepad ohne Syntax"], "a": 0, "e": "PlantUML erzeugt Diagramme aus Text."}]</script></section>
   <section class="block"><h2>Fragen zur Besprechung</h2><ul><li>Wie werden Aufrufe von einem Objekt zu einem anderen dargestellt?</li><li>Was sind Swimlanes?</li><li>Kann man in einem Sequenzdiagramm sehen, wie lange ein Objekt lebt?</li><li>Wie wird die Antwort (Return-Value) dargestellt?</li><li>Wie werden Aufrufe innerhalb desselben Objekts dargestellt?</li><li>Wie kann eine alternative Sequenz im Diagramm gezeigt werden?</li></ul></section>
 
   <div class="actions">
@@ -78,11 +83,12 @@ SS-&gt;&gt;SS: printGoodbye()</pre></div></section>
     <a class="more" href="https://github.com/Marlenzhh/Modul_320/blob/main/Anforderungen/Kompetenzen/KN-M2/README.md" target="_blank" rel="noopener noreferrer">Original-Auftrag lesen <span class="arrow">→</span></a>
   </div>
   <div class="pager"><a class="btn-sec" href="v1.html">← V1</a><a class="btn-sec" href="d2.html">D2 →</a></div>
-  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a></footer>
+  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a><br><span id="swStatus" class="muted"></span></footer>
 </main>
 </div>
 <nav class="tabbar" aria-label="Navigation"><a href="../index.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Übersicht</span></a><a href="v1.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg><span>V1</span></a><a href="d2.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg><span>D2</span></a></nav>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="../js/app.js"></script>
+<script src="../js/quiz.js"></script>
 </body>
 </html>

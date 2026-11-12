@@ -103,3 +103,10 @@ Hinweis zum Raster: Fuer Q1, Q2, Q4, D4 und V4 gibt es keinen Ordner `KN-*`. Das
 - Die Reihenfolge der Seiten folgt dem Raster von links nach rechts: M1, D1, V1, M2, D2, V2, M3, D3, V3, Q3, M4.
 - Lokal testen: `python -m http.server 4320` im Repo-Ordner, dann http://localhost:4320 öffnen.
 - Pages einschalten: Repo-Einstellungen, Pages, Branch `main`, Ordner `/ (root)`. `.nojekyll` verhindert die Jekyll-Verarbeitung.
+
+## Quiz und PWA
+
+- Jede Aufgabenseite hat ein Quiz (Richtig/Falsch und Multiple Choice, nur antippen). Falsche Antworten werden am Ende wiederholt, das beste Ergebnis wird im Browser gespeichert. Fragen stehen als JSON in der jeweiligen Seite, Logik in `js/quiz.js`.
+- Die Seite ist eine PWA: `manifest.webmanifest`, `sw.js` (Service Worker) und `icons/`. Beim ersten Besuch werden alle Seiten und Mermaid zwischengespeichert, danach läuft alles offline.
+- Nach inhaltlichen Änderungen in `sw.js` die Konstante `CACHE` hochzählen (z.B. `m320-v3`), damit Browser den Cache erneuern.
+- Offline testen: Seite einmal online öffnen, dann in den DevTools unter Netzwerk auf Offline stellen und neu laden.

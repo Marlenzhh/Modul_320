@@ -8,6 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0d1a2d">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="task">
@@ -51,6 +55,7 @@ UI --&gt;|validierte Eingabe| L[&quot;Logik (Service-Klasse)&quot;]
 L --&gt;|delegiert| API[&quot;API-Client (fremde Schnittstelle)&quot;]
 L -.-&gt;|wirft bei falschem Input| E[&quot;Eigene Exception&quot;]
 E -.-&gt; UI</pre></div><p class="muted caption">Jede Schicht kennt nur die nächste. Die Logik delegiert den Aufruf der fremden Schnittstelle an einen eigenen Client.</p></section>
+  <section class="block" id="quiz-section"><h2>Quiz</h2><div class="quiz" id="quiz" data-task="D3"></div><script type="application/json" id="quiz-data">[{"t": "mc", "q": "Was macht die main-Methode in einer sauber getrennten Applikation?", "o": ["Die ganze Logik", "Sie startet nur die Applikation", "Sie speichert die Daten", "Sie validiert alle Eingaben"], "a": 1, "e": "main startet nur die App. Alles andere liegt in eigenen Klassen."}, {"t": "tf", "q": "User-Input und Logik gehören in dieselbe Klasse.", "a": false, "e": "Falsch. Eingabe, Logik und Service-Aufrufe werden getrennt."}, {"t": "mc", "q": "Wovon wird eine eigene Exception-Klasse üblicherweise abgeleitet?", "o": ["Object direkt", "Exception oder RuntimeException", "String", "Thread"], "a": 1, "e": "Eigene Exceptions erben von Exception (geprüft) oder RuntimeException (ungeprüft)."}, {"t": "mc", "q": "Mit welchem Schlüsselwort wird eine Exception geworfen?", "o": ["throws", "throw", "raise", "catch"], "a": 1, "e": "throw wirft eine Exception. throws steht in der Methodensignatur."}, {"t": "tf", "q": "Der Aufruf einer fremden API sollte in einer eigenen Klasse (Client) liegen.", "a": true, "e": "Richtig. So bleibt die Logik unabhängig von der konkreten Schnittstelle."}, {"t": "mc", "q": "Wann wirft man eine eigene Exception?", "o": ["Bei jeder Methode", "Bei ungültiger Eingabe oder Fehlerzustand", "Nie", "Nur beim Programmstart"], "a": 1, "e": "Eigene Exceptions zeigen fehlerhafte Eingaben oder ungültige Zustände an."}]</script></section>
   <section class="block"><h2>Fragen zur Besprechung</h2><ul><li>Delegation zeigen</li><li>Wie kommunizieren Objekte miteinander? Werden Werte mitgegeben?</li><li>Trennung von User-Input, Logik und Aufruf der fremden Schnittstelle zeigen</li></ul></section>
 
   <div class="actions">
@@ -58,11 +63,12 @@ E -.-&gt; UI</pre></div><p class="muted caption">Jede Schicht kennt nur die näc
     <a class="more" href="https://github.com/Marlenzhh/Modul_320/blob/main/Anforderungen/Kompetenzen/KN-D3/README.md" target="_blank" rel="noopener noreferrer">Original-Auftrag lesen <span class="arrow">→</span></a>
   </div>
   <div class="pager"><a class="btn-sec" href="m3.html">← M3</a><a class="btn-sec" href="v3.html">V3 →</a></div>
-  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a></footer>
+  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a><br><span id="swStatus" class="muted"></span></footer>
 </main>
 </div>
 <nav class="tabbar" aria-label="Navigation"><a href="../index.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Übersicht</span></a><a href="m3.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg><span>M3</span></a><a href="v3.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg><span>V3</span></a></nav>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="../js/app.js"></script>
+<script src="../js/quiz.js"></script>
 </body>
 </html>

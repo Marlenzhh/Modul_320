@@ -8,6 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0d1a2d">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="task">
@@ -77,6 +81,7 @@ for (Fahrzeug f : garage) {
 <tr><td>Signatur</td><td>gleicher Name, andere Parameter</td><td>gleicher Name, gleiche Parameter</td></tr>
 <tr><td>Auswahl</td><td>zur Compile-Zeit</td><td>zur Laufzeit (Polymorphismus)</td></tr>
 </tbody></table></section>
+  <section class="block" id="quiz-section"><h2>Quiz</h2><div class="quiz" id="quiz" data-task="V2"></div><script type="application/json" id="quiz-data">[{"t": "mc", "q": "Was bedeutet Überschreiben (Override)?", "o": ["Gleiche Signatur in der Subklasse, neue Umsetzung", "Gleicher Name mit anderen Parametern in derselben Klasse", "Eine Klasse löschen", "Ein Attribut verstecken"], "a": 0, "e": "Die Subklasse ersetzt die Methode der Superklasse."}, {"t": "mc", "q": "Was bedeutet Überladen (Overload)?", "o": ["Gleicher Name, andere Parameter in derselben Klasse", "Eine Methode in der Subklasse ersetzen", "Zu viele Klassen", "Ein Interface umsetzen"], "a": 0, "e": "Beim Überladen unterscheiden sich die Parameterlisten."}, {"t": "tf", "q": "Polymorphismus heisst: gleicher Aufruf, je nach Objekttyp anderes Verhalten.", "a": true, "e": "Richtig, z.B. berechneReparatur() bei Auto, Lastwagen und Motorrad."}, {"t": "mc", "q": "Wer darf auf ein protected-Attribut zugreifen?", "o": ["Nur die eigene Klasse", "Eigene Klasse, Subklassen und gleiches Paket", "Alle", "Niemand"], "a": 1, "e": "protected erlaubt Zugriff für Subklassen und das gleiche Paket."}, {"t": "tf", "q": "Subklassen können private Attribute der Superklasse direkt lesen.", "a": false, "e": "Falsch. Sie brauchen protected-Attribute oder Getter."}, {"t": "mc", "q": "Welche Annotation markiert eine überschriebene Methode?", "o": ["@Overload", "@Override", "@Super", "@Inherit"], "a": 1, "e": "@Override lässt den Compiler prüfen, ob wirklich überschrieben wird."}]</script></section>
   <section class="block"><h2>Fragen zur Besprechung</h2><ul><li>Wie werden gekapselte Attribute trotzdem in Subklassen verwendet?</li><li>Was bedeutet Polymorphismus und wie zeigt er sich im Code?</li><li>Unterschied zwischen Überladen und Überschreiben, Beispiele im Code</li><li>Was ist der Vorteil der Vererbung?</li></ul></section>
 
   <div class="actions">
@@ -84,11 +89,12 @@ for (Fahrzeug f : garage) {
     <a class="more" href="https://github.com/Marlenzhh/Modul_320/blob/main/Anforderungen/Kompetenzen/KN-V2/README.md" target="_blank" rel="noopener noreferrer">Original-Auftrag lesen <span class="arrow">→</span></a>
   </div>
   <div class="pager"><a class="btn-sec" href="d2.html">← D2</a><a class="btn-sec" href="m3.html">M3 →</a></div>
-  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a></footer>
+  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a><br><span id="swStatus" class="muted"></span></footer>
 </main>
 </div>
 <nav class="tabbar" aria-label="Navigation"><a href="../index.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Übersicht</span></a><a href="d2.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg><span>D2</span></a><a href="m3.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg><span>M3</span></a></nav>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="../js/app.js"></script>
+<script src="../js/quiz.js"></script>
 </body>
 </html>

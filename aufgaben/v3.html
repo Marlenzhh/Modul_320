@@ -8,6 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0d1a2d">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="task">
@@ -82,6 +86,7 @@ Rabatt &lt;|.. BlackFriday
 Rabatt &lt;|.. Treuerabatt</pre></div></section><section class="block"><h2>Idee 3: Verhalten als Interface auslagern</h2>
 <p>Das Waffen-Verhalten der Figuren-Hierarchie wird in ein Interface <code>WaffenVerhalten</code> ausgelagert. Die Superklasse <code>Figur</code> hat es als Attribut, jede konkrete Figur bekommt ihr Verhalten. Eine Menu-Klasse lässt Figuren und Waffen-Verhalten wählen und listet alles auf.</p>
 <figure class="figure"><img src="../Anforderungen/x_gitres/figur_hierarchie.png" alt="Bestehende Figuren-Hierarchie" loading="lazy"><figcaption class="muted">Hierarchie, die umgebaut werden soll</figcaption></figure></section>
+  <section class="block" id="quiz-section"><h2>Quiz</h2><div class="quiz" id="quiz" data-task="V3"></div><script type="application/json" id="quiz-data">[{"t": "mc", "q": "Was legt ein Interface fest?", "o": ["Methodensignaturen, die Klassen umsetzen müssen", "Private Attribute", "Die main-Methode", "Den Speicherort"], "a": 0, "e": "Ein Interface beschreibt, was eine Klasse können muss, nicht wie."}, {"t": "tf", "q": "Eine Klasse kann mehrere Interfaces implementieren.", "a": true, "e": "Richtig."}, {"t": "mc", "q": "Warum kennt das Portfolio nur das Interface StockExchange?", "o": ["Damit die Börse ausgetauscht werden kann, ohne Portfolio zu ändern", "Weil Interfaces schneller sind", "Weil Java es verlangt", "Damit es weniger Klassen gibt"], "a": 0, "e": "Das ist lose Kopplung: Zürich, London oder New York sind austauschbar."}, {"t": "tf", "q": "Das Strategy Pattern kapselt austauschbare Algorithmen hinter einem Interface.", "a": true, "e": "Richtig, z.B. verschiedene Rabattberechnungen."}, {"t": "mc", "q": "Was bedeutet der Deadly Diamond of Death?", "o": ["Mehrfachvererbung mit gleicher Methode in zwei Elternklassen führt zu Mehrdeutigkeit", "Ein Compilerfehler bei Interfaces", "Ein Speicherfehler", "Eine Endlosschleife"], "a": 0, "e": "Java vermeidet das, indem Klassen nur von einer Klasse erben."}, {"t": "mc", "q": "Wie werden Interfaces polymorph genutzt?", "o": ["Eine Variable vom Interface-Typ zeigt auf verschiedene Implementationen", "Durch Überladen", "Durch static", "Gar nicht"], "a": 0, "e": "Beispiel: StockExchange boerse = new Zuerich();"}]</script></section>
   
 
   <div class="actions">
@@ -89,11 +94,12 @@ Rabatt &lt;|.. Treuerabatt</pre></div></section><section class="block"><h2>Idee 
     <a class="more" href="https://github.com/Marlenzhh/Modul_320/blob/main/Anforderungen/Kompetenzen/KN-V3/README.md" target="_blank" rel="noopener noreferrer">Original-Auftrag lesen <span class="arrow">→</span></a>
   </div>
   <div class="pager"><a class="btn-sec" href="d3.html">← D3</a><a class="btn-sec" href="q3.html">Q3 →</a></div>
-  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a></footer>
+  <footer class="footer">Erstellt von <a href="https://n-brand.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Nicolas Brand</a><br><span id="swStatus" class="muted"></span></footer>
 </main>
 </div>
 <nav class="tabbar" aria-label="Navigation"><a href="../index.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Übersicht</span></a><a href="d3.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg><span>D3</span></a><a href="q3.html"><svg class="ico" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg><span>Q3</span></a></nav>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
 <script src="../js/app.js"></script>
+<script src="../js/quiz.js"></script>
 </body>
 </html>
